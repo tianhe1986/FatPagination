@@ -187,7 +187,7 @@ class FatPagination
 
         //url，没有则默认当前url
         if (! isset($params['url'])) {
-            $params['url'] = preg_replace('/'.$params['pageParam'].'=\d+&?/ui', '', $_SERVER["REQUEST_URI"]);           
+            $params['url'] = preg_replace('/'.$params['pageParam'].'=\d+&?/ui', '', $this->getCurrentUrl());
         }
         $params['url'] = trim($params['url'], '&?');
         $params['url'] .= (strpos($params['url'], '?') !== false ? '&' : '?').$params['pageParam'].'=(:num)';
@@ -271,4 +271,14 @@ class FatPagination
 
         return $params;
     }
+
+    /**
+     * 获取当前url，用于单元测试
+     * 
+     * @return string
+     */
+    public function getCurrentUrl()
+    {
+        return $_SERVER["REQUEST_URI"];
+    }      
 }
