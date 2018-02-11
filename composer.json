@@ -1,0 +1,24 @@
+{
+    "name": "tianhe1986/fatpagination",
+    "type": "library",
+    "description": "A simple php pagination library",
+    "keywords": ["php", "pagination"],
+    "license": "MIT",
+    "homepage": "https://github.com/tianhe1986/FatPagination",
+    "require": {
+        "php": ">=5.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": ">=4.8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "FatPagination\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FatPagination\\Tests\\": "tests/"
+        }
+    }
+}
