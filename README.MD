@@ -25,7 +25,7 @@ $ composer install
 require "vendor/autoload.php";
 ```
 
-#分页处理
+# 分页处理
 简单的用法示例如下：
 ```php
 use FatPagination\FatPagination;
@@ -76,7 +76,7 @@ $divHtml = $pagination->getDivHtml();
 
 默认情况下，会使用`page`作为分页的参数，当前页码会加上class="active"，当前页左右最多各展示3个数字页码。可以通过传入参数更改这些配置，具体的参数列表见下一小节。
 
-#传入参数
+# 传入参数
 所有支持的参数列表如下：
 
 | 参数名 | 说明 |
@@ -199,7 +199,7 @@ $divHtml = $pagination->getDivHtml();
 </div>
 ```
 
-#自行构造分页html
+# 自行构造分页html
 如果提供的参数依旧不能满足需要，可以按照如下方式，获取首/末页，上/下一页，以及数字页码，然后自行拼接html:
 ```php
 use FatPagination\FatPagination;
